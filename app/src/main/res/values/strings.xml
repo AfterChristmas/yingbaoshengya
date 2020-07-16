@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">高考参谋长</string>
+    <string name="app_name">高考生涯</string>
     <string name="phone_is_null">手机号不能为空！</string>
     <string name="cardnum_is_null">请输入卡号</string>
     <string name="phone_is_error">请输入正确的手机号！</string>
