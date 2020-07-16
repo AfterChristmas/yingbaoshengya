@@ -76,7 +76,7 @@ class DownloadActivity : BaseActivity() {
                 }
                 simplePagerTitleView.setTextSize(16f);
                 simplePagerTitleView.setNormalColor(Color.parseColor("#666666"));
-                simplePagerTitleView.setSelectedColor(Color.parseColor("#0D6EFF"));
+                simplePagerTitleView.setSelectedColor(Color.parseColor("#FFAD00"));
                 simplePagerTitleView.setOnClickListener { mViewPager.currentItem = index }
                 return simplePagerTitleView
             }
@@ -85,7 +85,7 @@ class DownloadActivity : BaseActivity() {
                 val indicator = LinePagerIndicator(context)
                 indicator.mode = LinePagerIndicator.MODE_EXACTLY
                 indicator.lineWidth=UIUtil.dip2px(context,32.0).toFloat()
-                indicator.setColors(Color.parseColor("#0D6EFF"))
+                indicator.setColors(Color.parseColor("#FFAD00"))
                 return indicator
             }
         }

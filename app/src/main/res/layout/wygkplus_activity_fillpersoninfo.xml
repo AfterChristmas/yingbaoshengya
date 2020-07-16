@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="25dp"
             android:gravity="center_vertical"
-            android:text="昵称"
+            android:text="姓名"
             android:textColor="@color/career_666666"
             android:textSize="13sp" />
 
@@ -34,7 +34,7 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/personal_inf_img0"
             android:gravity="center_vertical|right"
-            android:hint="请输入您的昵称"
+            android:hint="请输入您的姓名"
             android:background="@null"
             android:textColor="@color/career_textmain_242424"
             android:textSize="11sp" />
@@ -55,11 +55,9 @@
         android:layout_width="match_parent"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:visibility="gone"
         android:layout_height="0.5dp"
         android:background="@color/career_EEEEEE" />
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rl_gender"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -97,14 +95,12 @@
             android:visibility="visible" />
     </RelativeLayout>
     <View
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_height="0.5dp"
         android:background="@color/career_EEEEEE" />
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rl_gaokao_location"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -142,14 +138,12 @@
             android:visibility="visible" />
     </RelativeLayout>
     <View
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_height="0.5dp"
         android:background="@color/career_EEEEEE" />
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rl_study_city"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -192,11 +186,9 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_height="0.5dp"
-        android:visibility="gone"
         android:background="@color/career_EEEEEE" />
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rl_study_school"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -238,7 +230,6 @@
             android:visibility="visible" />
     </RelativeLayout>
     <View
-        android:visibility="gone"
         android:id="@+id/personal_information_divider4"
         android:layout_width="match_parent"
         android:layout_marginLeft="25dp"
@@ -246,7 +237,6 @@
         android:layout_height="0.5dp"
         android:background="@color/career_EEEEEE" />
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rl_grade"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -284,7 +274,6 @@
             android:visibility="visible" />
     </RelativeLayout>
     <View
-        android:visibility="gone"
         android:id="@+id/personal_information_divider5"
         android:layout_width="match_parent"
         android:layout_marginLeft="25dp"
@@ -294,7 +283,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:visibility="gone"
         android:background="@color/career_white">
 
         <TextView

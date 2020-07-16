@@ -52,7 +52,7 @@
                     android:layout_marginRight="16dp"
                     android:focusableInTouchMode="true"
                     app:shadowMarginBottom="5dp"
-                    app:shadowColor="#1F0D6EFF"
+                    app:shadowColor="#1FFFAD00"
                     app:shadowRadius="14dp"
                     >
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -188,7 +188,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="15dp"
-                            android:visibility="gone"
                             android:textSize="12sp"
                             android:textColor="@color/career_666666"
                             android:text="未设置"/>
@@ -230,7 +229,7 @@
 
                     <ImageView
                         style="@style/arrow_style"
-                         />
+                        />
                 </RelativeLayout>
 
                 <View
@@ -367,7 +366,7 @@
         android:id="@+id/rl_titlebar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-       >
+        >
 
         <LinearLayout
             android:id="@+id/ll_return"

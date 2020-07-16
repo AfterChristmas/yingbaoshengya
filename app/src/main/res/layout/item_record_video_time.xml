@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:text="2020-04-09"
-        android:textColor="@color/career_0D6EFF"
+        android:textColor="@color/career_FFAD00"
         android:textSize="12sp" />
 
 </LinearLayout>

@@ -2,12 +2,17 @@ package com.yingbao.career.ui.home.activity
 
 import android.content.Intent
 import android.os.Bundle
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.yingbao.career.Base.BaseActivity
 import com.yingbao.career.R
 import com.yingbao.career.common.CommonConstant
 import com.yingbao.career.dialog.UserAgreementDialog
 import com.yingbao.career.utils.CareerSPHelper
+import com.yingbao.career.utils.GlideRoundImage
+import kotlinx.android.synthetic.main.activity_splash.*
 import java.util.*
+
 
 /**
  * @Description:
@@ -18,6 +23,13 @@ class SplashActivity :BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        val myOptions = RequestOptions().transform(GlideRoundImage(application, 6))
+        Glide.with(application)
+            .load(R.mipmap.ic_launcher) //                .centerCrop()
+            .apply(myOptions)
+            .into(
+                iv_splash_icon
+            )
     }
 
     override fun onResume() {

@@ -161,7 +161,7 @@ class QuestionRecordFragment : Fragment(){
         val barDataSet1 = BarDataSet(barEntries1, "")
         barDataSet1.valueTextColor = Color.RED // 值的颜色
         barDataSet1.valueTextSize = 15f // 值的大小
-        barDataSet1.color = Color.parseColor("#0D6EFF") // 柱子的颜色
+        barDataSet1.color = Color.parseColor("#FFAD00") // 柱子的颜色
         barDataSet1.setDrawValues(false) // 不显示值
         barDataSet1.isHighlightEnabled = false
         barDataSet1.label = "道" // 设置标签之后，图例的内容默认会以设置的标签显示

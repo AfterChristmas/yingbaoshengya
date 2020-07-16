@@ -23,13 +23,13 @@ class FillPersonInfoActivity : BaseActivity(),View.OnClickListener {
     private val studySchoolRequestCode =  20005;
     private var gender = 0;
     private var grade = 0;
-    private var provinceId = 410000;
-    private var provinceName = "河南省";
-    private var studyCityId = 370900;
-    private var studyCityName = "新泰市";
-    private var studySchoolId = 38322;
-    private var studyCountryId = 370900;
-    private var studySchoolName = "山东省新泰市天宝镇第二初级中学";
+    private var provinceId = -1;
+    private var provinceName = "";
+    private var studyCityId = -1;
+    private var studyCityName = "";
+    private var studySchoolId = -1;
+    private var studyCountryId = -1;
+    private var studySchoolName = "";
 
     companion object {
 
@@ -105,7 +105,7 @@ class FillPersonInfoActivity : BaseActivity(),View.OnClickListener {
         when (requestCode) {
             genderRequestCode -> {
                 if (data != null) {
-                     gender = data.getIntExtra("gender", 0)
+                    gender = data.getIntExtra("gender", 0)
                     if (gender == 0){
                         tv_gender.setText("男")
                     }else{
@@ -168,10 +168,10 @@ class FillPersonInfoActivity : BaseActivity(),View.OnClickListener {
     }
     private fun saveUserInfo() {
         if (TextUtils.isEmpty(et_name.text.toString())){
-            ToastUtil.showShort(applicationContext,"请输入昵称")
+            ToastUtil.showShort(applicationContext,"请输入姓名")
             return
         }
-    /*    if (provinceId==-1){
+        if (provinceId==-1){
             ToastUtil.showShort(applicationContext,"请选择高考所在地")
             return
         }
@@ -191,7 +191,7 @@ class FillPersonInfoActivity : BaseActivity(),View.OnClickListener {
             ToastUtil.showShort(applicationContext,"请输入所在班级")
             return
         }
-*/
+
         val params = HashMap<String,String>()
         params.put("name",et_name.text.toString())
         params.put("provinceId",provinceId.toString())

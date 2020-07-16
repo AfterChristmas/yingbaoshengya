@@ -10,7 +10,7 @@
         app:timeline_lineStyle="dashed"
         android:layout_marginRight="12dp"
         android:id="@+id/time_line"
-        app:timeline_lineColor="@color/career_0D6EFF"
+        app:timeline_lineColor="@color/career_FFAD00"
         app:timeline_type="middle"
         android:layout_width="1dp"
         android:layout_height="match_parent" />

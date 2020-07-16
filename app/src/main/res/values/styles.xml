@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/career_window_bg</item>
         <item name="colorPrimaryDark">@color/career_window_bg</item>
-        <item name="colorAccent">@color/career_0D6EFF</item>
+        <item name="colorAccent">@color/career_FFAD00</item>
         <item name="android:windowBackground">@color/career_window_bg</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -16,7 +16,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/career_window_bg</item>
         <item name="colorPrimaryDark">@color/career_window_bg</item>
-        <item name="colorAccent">@color/career_0D6EFF</item>
+        <item name="colorAccent">@color/career_FFAD00</item>
         <item name="android:windowActionBar">false</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -36,7 +36,7 @@
         <item name="shadowMarginLeft">1dp</item>
         <item name="shadowMarginRight">1dp</item>
         <item name="shadowMarginBottom">10dp</item>
-        <item name="shadowColor">#1F0D6EFF</item>
+        <item name="shadowColor">#1FFFAD00</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -47,7 +47,7 @@
         <item name="shadowMarginLeft">2dp</item>
         <item name="shadowMarginRight">2dp</item>
         <item name="shadowMarginBottom">14dp</item>
-        <item name="shadowColor">#140D6EFF</item>
+        <item name="shadowColor">#14FFAD00</item>
     </style>
     <style name="TransparentWindow" parent="AppTheme">
         <item name="android:windowBackground">@android:color/transparent</item>

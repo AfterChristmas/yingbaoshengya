@@ -37,7 +37,7 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:shadowMarginBottom="5dp"
-                app:shadowColor="#140D6EFF"
+                app:shadowColor="#14FFAD00"
                 app:shadowRadius="14dp"
                 >
                 <RelativeLayout
@@ -152,7 +152,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:shadowMarginTop="5dp"
-        app:shadowColor="#140D6EFF"
+        app:shadowColor="#14FFAD00"
         app:shadowRadius="14dp"
         >
     <LinearLayout

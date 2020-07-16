@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0D6EFF</color>
-    <color name="colorPrimaryDark">#0D6EFF</color>
-    <color name="colorAccent">#0D6EFF</color>
-    <color name="career_maincolor">#0D6EFF</color>
+    <color name="colorPrimary">#FFAD00</color>
+    <color name="colorPrimaryDark">#FFAD00</color>
+    <color name="colorAccent">#FFAD00</color>
+    <color name="career_maincolor">#FFAD00</color>
     <color name="career_white">#ffffff</color>
     <color name="career_textsec_999999">#999999</color>
     <color name="career_646464">#646464</color>
@@ -35,7 +35,7 @@
     <color name="career_EEEEEE">#EEEEEE</color>
     <color name="career_3BA8F7">#3BA8F7</color>
     <color name="career_FEA51B">#FEA51B</color>
-    <color name="career_0D6EFF">#0D6EFF</color>
+    <color name="career_FFAD00">#FFAD00</color>
     <color name="career_textmain_242424">#242424</color>
     //50%的透明度
     <color name="career_FF000000">#80000000</color>

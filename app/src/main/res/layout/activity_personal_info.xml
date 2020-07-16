@@ -22,7 +22,6 @@
             android:layout_marginRight="15dp"
             android:orientation="vertical">
             <TextView
-                android:visibility="gone"
                 style="@style/me_item_main_style"
                 android:text="基本信息" />
             <RelativeLayout
@@ -47,11 +46,9 @@
             </RelativeLayout>
 
             <View
-                android:visibility="gone"
                 style="@style/common_divider_e6e6e6"
                 />
             <RelativeLayout
-                android:visibility="gone"
                 android:id="@+id/rl_apps"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
@@ -113,7 +110,7 @@
                 >
                 <TextView
                     style="@style/me_item_text_style"
-                    android:text="昵称" />
+                    android:text="姓名" />
 
                 <TextView
                     android:layout_alignParentRight="true"
@@ -128,11 +125,9 @@
             </RelativeLayout>
 
             <View
-                android:visibility="gone"
                 style="@style/common_divider_e6e6e6"
                 />
             <RelativeLayout
-                android:visibility="gone"
                 android:id="@+id/rl_gender"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
@@ -151,12 +146,10 @@
                 />
 
             <TextView
-                android:visibility="gone"
                 android:layout_marginTop="20dp"
                 style="@style/me_item_main_style"
                 android:text="学籍信息" />
             <RelativeLayout
-                android:visibility="gone"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
@@ -172,11 +165,9 @@
             </RelativeLayout>
 
             <View
-                android:visibility="gone"
                 style="@style/common_divider_e6e6e6"
                 />
             <RelativeLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:clickable="true"
@@ -191,11 +182,9 @@
             </RelativeLayout>
 
             <View
-                android:visibility="gone"
                 style="@style/common_divider_e6e6e6"
                 />
             <RelativeLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:clickable="true"
@@ -210,13 +199,11 @@
             </RelativeLayout>
 
             <View
-                android:visibility="gone"
                 style="@style/common_divider_e6e6e6"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:visibility="gone"
                 android:clickable="true"
                 >
                 <TextView
@@ -232,7 +219,6 @@
                 style="@style/common_divider_e6e6e6"
                 />
             <TextView
-                android:visibility="gone"
                 android:textSize="12sp"
                 android:layout_width="match_parent"
                 android:gravity="center"

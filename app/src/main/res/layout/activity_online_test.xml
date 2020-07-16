@@ -38,7 +38,7 @@
             android:gravity="center"
             android:lines="1"
             android:text="00:00"
-            android:textColor="@color/career_0D6EFF"
+            android:textColor="@color/career_FFAD00"
             android:textSize="18sp" />
 
 
@@ -120,7 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:shadowMarginTop="5dp"
-        app:shadowColor="#140D6EFF"
+        app:shadowColor="#14FFAD00"
         app:shadowRadius="14dp"
         >
         <TextView

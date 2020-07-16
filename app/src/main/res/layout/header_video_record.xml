@@ -18,7 +18,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:layout_constraintDimensionRatio="h,656:160"
-        app:shadowColor="#1F0D6EFF"
+        app:shadowColor="#1FFFAD00"
         app:shadowMarginBottom="5dp"
         app:shadowRadius="14dp">
 
@@ -98,7 +98,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:layout_constraintDimensionRatio="h,656:160"
-        app:shadowColor="#1F0D6EFF"
+        app:shadowColor="#1FFFAD00"
         app:shadowMarginBottom="5dp"
         app:shadowRadius="14dp">
 
@@ -137,7 +137,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:layout_constraintDimensionRatio="h,656:160"
-        app:shadowColor="#1F0D6EFF"
+        app:shadowColor="#1FFFAD00"
         app:shadowMarginBottom="5dp"
         app:shadowRadius="14dp">
 
