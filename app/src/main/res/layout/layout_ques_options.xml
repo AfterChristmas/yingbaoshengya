@@ -1,77 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<www.linwg.org.lib.LCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/shadow_view"
-    app:cornerRadius="6dp"
-    android:background="@color/career_window_bg"
-    app:shadowColor="#1F0D6EFF"
-    app:shadowMarginBottom="15dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:focusable="true"
-    app:bottomOffset="4dp"
-    android:focusableInTouchMode="true">
-
-    <RelativeLayout
-        android:id="@+id/rl_option"
-        android:background="@color/career_white"
+    >
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/option_BTN"
-            android:textColor="@color/career_textmain_242424"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:textSize="14sp"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:text="A"
-            android:background="@null"
-            style="?android:attr/borderlessButtonStyle"
-            android:textStyle="bold"
-           />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/career_window_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/career_white"
-            android:orientation="vertical"
-            android:id="@+id/option_content_LL"
+        <RelativeLayout
+            android:id="@+id/rl_option"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:paddingTop="15dp"
-            android:paddingLeft="15dp"
-            android:paddingBottom="15dp"
-            android:paddingRight="12dp"
-            android:layout_toRightOf="@id/option_BTN"
-            tools:ignore="MissingConstraints">
-            <com.yingbao.career.view.MyQuesView
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/web_option"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:background="@color/career_white"
+            android:orientation="horizontal">
+
             <Button
-                android:id="@+id/btn_option"
-                app:layout_constraintLeft_toLeftOf="@+id/web_option"
-                app:layout_constraintRight_toRightOf="@+id/web_option"
-                app:layout_constraintTop_toTopOf="@+id/web_option"
-                app:layout_constraintBottom_toBottomOf="@+id/web_option"
-                android:background="@null"
-                android:minHeight="0dp"
+                android:id="@+id/option_BTN"
                 style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="A"
+                android:textColor="@color/career_textmain_242424"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/option_content_LL"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/option_BTN"
+                android:background="@color/career_white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="15dp"
+                tools:ignore="MissingConstraints">
+
+                <com.yingbao.career.view.MyQuesView
+                    android:id="@+id/web_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_option"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:minHeight="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/web_option"
+                    app:layout_constraintLeft_toLeftOf="@+id/web_option"
+                    app:layout_constraintRight_toRightOf="@+id/web_option"
+                    app:layout_constraintTop_toTopOf="@+id/web_option" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </RelativeLayout>
-</www.linwg.org.lib.LCardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
