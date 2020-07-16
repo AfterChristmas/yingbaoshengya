@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="LockedOrientationActivity"
+    package="com.yingbao.career">
+
+    <!-- 基础权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- PolyvSDKClient.initCrashReport使用到的权限，如果没有调用此方法，可以去掉该权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 投屏功能所需 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/yingbao_network_security_config"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/WhiteAppTheme">
+        <activity android:name=".ui.question.StudyRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.question.KnowPointActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.question.ErrorDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.question.OnlineTestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.question.ErrorBookActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.personal.ConnectUsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.personal.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.personal.MeActivity"
+            android:theme="@style/MeAppTheme" />
+        <activity android:name=".ui.personal.PersonalInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.ResetPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.UpdatePwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.UpdatePhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.ForgetPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.BindPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.FillPersonInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.GenderSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.GradeSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.GaoKaoLocationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.StudySchoolActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.personal.StudyCityActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.home.activity.CourseListActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.SubjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.question.KnowledgeTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.CacheActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.CollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.SmartExerciseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.videodownload.DownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.ClassCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.question.ChapterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.activity.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yingbao.career.ui.home.activity.VideoKnowPointsAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yingbao.career.ui.home.activity.TestKnowPointsAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yingbao.career.ui.home.activity.VideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.question.WrongDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".ui.home.activity.WebActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".video.PolyvPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:supportsPictureInPicture="true"
+            android:launchMode="singleTask"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="PlayerActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name=".video.PolyvBackgroundPlayService" />
+
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/career_white"
+    android:layout_height="match_parent"
+    tools:context=".ui.personal.AboutUsActivity">
+
+    <include
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/title_layout"
+        layout="@layout/white_titlebar" />
+    <TextView
+        android:id="@+id/tv_company_name"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:text="秦皇岛盈宝科技有限公司"
+        android:textColor="@color/career_textmain_242424"
+        android:textSize="15sp" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tv_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="秦皇岛盈宝科技有限公司是一家专注于互联网+教育产品的开发和运营企业，为千万学子提供创新教育服务的互联网企业。通过运用互联网创新技术搭建学习平台，提供在线学习、生涯规划、高招资讯等配套学习服务，为广大高中学子出某策划、创造学习和择优条件，顺利开启梦想旅程。"
+        android:textColor="@color/career_textmain_242424"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_copy_right"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_xieyi"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginRight="15dp"
+            android:text="用户协议"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_zhengce"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:text="隐私政策"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_copy_right"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.5"
+        android:text="备案号Copyrigt @ 2016-2020"
+        android:textColor="@color/career_666666"
+        android:layout_marginBottom="30dp"
+        android:textSize="14sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

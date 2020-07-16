@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sl_download"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#ff6000"
+        android:tag="ll_delete">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/polyv_commom_click_color_gray"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/polyv_white_click_to_gray"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_start"
+            android:layout_width="@dimen/top_left_layout_width"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_margin_lr"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/video_preview"
+                android:layout_width="128dp"
+                android:layout_height="80dp"/>
+            <ImageView
+                android:id="@+id/iv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/polyv_btn_download" />
+        </FrameLayout>
+
+        <RelativeLayout
+            style="@style/lo_download_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_seri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:visibility="gone"
+                android:textColor="@color/center_view_color_blue"
+                android:textSize="@dimen/center_text_size" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_seri"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="这是一行测试的文本。。。。。。。。。。。。。。。。。。。。。。。。。。........。..。。。。。。。。。。"
+                android:textColor="@color/career_textmain_242424"
+                android:textSize="@dimen/center_text_size" />
+
+            <TextView
+                android:id="@+id/tv_size"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_title"
+                android:layout_below="@id/tv_title"
+                android:layout_marginTop="@dimen/bottom_tv_margin_top"
+                android:background="@drawable/polyv_border_s"
+                android:gravity="center"
+                android:text="100M"
+                android:textColor="@color/top_right_text_color_black"
+                android:textSize="@dimen/center_right_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/rl_loaded"
+                android:visibility="gone"
+                android:layout_below="@id/tv_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:text="下载完成"
+                    android:textSize="12sp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/career_666666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/tv_delete_loaded"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="删除"
+                    android:textSize="12sp"
+                    android:textColor="@color/career_0D6EFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_title"
+                android:layout_below="@id/tv_size"
+                android:layout_marginTop="@dimen/center_bottom_margin_top_m">
+
+                <TextView
+                    android:text="19%"
+                    android:id="@+id/pb_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/career_666666"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:layout_toRightOf="@+id/pb_progress"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="0.00B/S"
+                    android:textColor="@color/career_666666"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/polyv_border_s"
+                    android:gravity="center"
+                    android:text="正在下载"
+                    android:textColor="@color/polyv_status_text_color"
+                    android:textSize="@dimen/center_right_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>

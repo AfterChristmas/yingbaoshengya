@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.question.StudyRecordActivity">
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/white_titlebar"
+        />
+    <include
+        android:layout_marginTop="10dp"
+        android:id="@+id/container"
+        layout="@layout/wygkplus_slidingtab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_titlebar" />
+</LinearLayout>

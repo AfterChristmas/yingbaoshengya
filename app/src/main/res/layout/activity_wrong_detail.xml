@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/career_window_bg"
+    tools:context=".ui.question.OnlineTestActivity">
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/white_titlebar"
+        />
+    <LinearLayout
+        android:id="@+id/linerSplit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/sView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="-10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtParentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:visibility="gone"
+                    android:textColor="@color/career_textmain_242424"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ques_parent_body_LL"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_height="wrap_content"
+                     />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/btnSplit"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:clickable="true"
+            android:src="@drawable/click_btn_stk_split" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/career_divider_EBEBEB" />
+    </LinearLayout>
+    <com.yingbao.career.view.ScrollViewCus
+        android:layout_below="@+id/linerSplit"
+        android:id="@+id/scroll_ques"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:background="@color/career_window_bg"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/career_666666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:text="2020-02-12    12:36:39" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/blue_light_bg"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="1dp"
+                    android:text="生物"
+                    android:id="@+id/tv_subject"
+                    android:textColor="@color/career_white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <TextView
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="16sp"
+                android:textColor="@color/career_textmain_242424"
+                android:text="原题"/>
+            <RelativeLayout
+                android:id="@+id/ques_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/ques_options_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/ques_parse_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:orientation="vertical" >
+                <TextView
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/career_textmain_242424"
+                    android:text="正确答案"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_question_parse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_answer"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/career_textmain_242424"
+                    android:text="我的答案"/>
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/career_666666"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </com.yingbao.career.view.ScrollViewCus>
+
+</RelativeLayout>

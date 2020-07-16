@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subject_name_array">
+        <item>语文</item>
+        <item>数学</item>
+        <item>英语</item>
+        <item>物理</item>
+        <item>化学</item>
+        <item>生物</item>
+        <item>政治</item>
+        <item>历史</item>
+        <item>地理</item>
+    </string-array>
+    <integer-array  name="subject_ids_array">
+        <item>1001</item>
+        <item>1002</item>
+        <item>1003</item>
+        <item>1004</item>
+        <item>1005</item>
+        <item>1006</item>
+        <item>1007</item>
+        <item>1008</item>
+        <item>1009</item>
+    </integer-array>
+
+    <!-- 九个学科对应的icon -->
+    <array name="nine_subject_icons">
+        <item>@drawable/yuwen_subject_bg</item>
+        <item>@drawable/shuxue_subject_bg</item>
+        <item>@drawable/yingyu_subject_bg</item>
+        <item>@drawable/wuli_subject_bg</item>
+        <item>@drawable/huaxue_subject_bg</item>
+        <item>@drawable/shengwu_subject_bg</item>
+        <item>@drawable/zhengzhi_subject_bg</item>
+        <item>@drawable/lishi_subject_bg</item>
+        <item>@drawable/dili_subject_bg</item>
+    </array>
+
+    <array name="subject_array_color">
+        <item>@color/color_bar_chinese</item>
+        <item>@color/color_bar_math</item>
+        <item>@color/color_bar_eng</item>
+        <item>@color/color_bar_phs</item>
+        <item>@color/color_bar_chem</item>
+        <item>@color/color_bar_bio</item>
+        <item>@color/color_bar_poli</item>
+        <item>@color/color_bar_his</item>
+        <item>@color/color_bar_geo</item>
+    </array>
+</resources>

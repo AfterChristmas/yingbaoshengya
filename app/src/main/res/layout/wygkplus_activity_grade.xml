@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/career_F8F6F9"
+    android:orientation="vertical"
+   >
+
+    <include
+        android:id="@+id/rl_titlebar"
+        layout="@layout/white_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="高一"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_first"
+            android:visibility="visible"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/wygk_yellow_chosed" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/career_EEEEEE" />
+
+    <RelativeLayout
+        android:id="@+id/rl_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="高二"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_second"
+            android:visibility="gone"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/wygk_yellow_chosed" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:id="@+id/rl_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="高三"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_third"
+            android:visibility="gone"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/wygk_yellow_chosed" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/career_EEEEEE" />
+</LinearLayout>

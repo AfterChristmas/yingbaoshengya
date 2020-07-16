@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/career_white"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/white_titlebar"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:background="@color/career_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:visibility="gone"
+                style="@style/me_item_main_style"
+                android:text="基本信息" />
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/rl_usericon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+                <TextView
+                    android:layout_centerVertical="true"
+                    style="@style/me_item_text_style"
+                    android:text="头像" />
+
+                <com.yingbao.career.view.CircleImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/iv_usericon"
+                    android:layout_centerVertical="true"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"/>
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_apps"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="账号" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/career_666666"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_user_account"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:id="@+id/rl_name"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="手机号码" />
+
+                <ImageView
+                    android:id="@+id/iv_name_arrow"
+                    style="@style/arrow_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_name_arrow"
+                    android:textColor="@color/career_666666"
+                    android:id="@+id/tv_phone"
+                    android:text="" />
+            </RelativeLayout>
+            <View
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:id="@+id/rl_username"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="昵称" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/career_666666"
+                    android:id="@+id/tv_user_name"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_gender"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="性别" />
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/me_item_right_text_style"
+                    android:text=""/>
+            </RelativeLayout>
+            <View
+                style="@style/common_divider_e6e6e6"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                style="@style/me_item_main_style"
+                android:text="学籍信息" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="所在地区" />
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/me_item_right_text_style"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="所在学校" />
+                <TextView
+                    android:id="@+id/tv_school"
+                    style="@style/me_item_right_text_style"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="所在年级" />
+                <TextView
+                    android:id="@+id/tv_grade"
+                    style="@style/me_item_right_text_style"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                style="@style/common_divider_e6e6e6"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:visibility="gone"
+                android:clickable="true"
+                >
+                <TextView
+                    style="@style/me_item_text_style"
+                    android:text="所在班级" />
+                <TextView
+                    android:id="@+id/tv_class"
+                    style="@style/me_item_right_text_style"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                style="@style/common_divider_e6e6e6"
+                />
+            <TextView
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/career_FEA51B"
+                android:text="（学籍信息不可修改，如需需改请联系客服人员）" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,2 @@
+include ':app', ':bannerview', ':videolibrary'
+rootProject.name='gaokaocareer'

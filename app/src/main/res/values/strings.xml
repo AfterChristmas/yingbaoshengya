@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">高考参谋长</string>
+    <string name="phone_is_null">手机号不能为空！</string>
+    <string name="cardnum_is_null">请输入卡号</string>
+    <string name="phone_is_error">请输入正确的手机号！</string>
+    <string name="checkcode_is_null">请输入验证码</string>
+    <string name="pwd_is_null">密码不能为空！</string>
+    <string name="pwd_length_error">密码长度应为6-16位！</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <string name="confirm_new_pwd">请确认新密码</string>
+    <string name="pwd_is_different">两次密码不一致！</string>
+    <string name="state_idle">IDLE</string>
+    <string name="state_pending">PENDING</string>
+    <string name="state_unknown">UNKNOWN</string>
+    <string name="state_running">RUNNING</string>
+    <string name="common_waiting">请稍候…</string>
+    <string name="answer_error">很遗憾答错了，错题将自动加入错题本</string>
+    <string name="answer_right">恭喜你，回答正确!</string>
+    <!--隐私协议部分-->
+    <string name="common_agree_and_use">同意并开始使用</string>
+    <string name="common_not_agree_and_exit">不同意并退出</string>
+    <string name="main_user_agreement_title">用户协议与隐私保护</string>
+    <string name="common_user_agreement">用户协议</string>
+    <string name="common_privacy_policy">隐私政策</string>
+    <string name="main_user_agreement_start">
+        欢迎使用高考参谋长APP！\n
+        我们非常重视您的个人信息和隐私保护，为了更好地保障您的个人权益，在您使用高考参谋长APP前，请务必认真阅读</string>
+    <string name="main_jzjxt_agreement">《高考参谋长用户协议》</string>
+    <string name="main_agreement_and">与</string>
+    <string name="main_privacy_policy">《高考参谋长隐私政策》</string>
+    <string name="main_user_agreement_end">内的所有条款，尤其是：\n
+        1、我们对您的个人信息的收集、保存、使用、保护等规则条款，以及您的用户权利等条款；\n
+        2、约定我们的限制责任、免责条款。\n
+        您点击“同意并开始使用”的行为即表示您已阅读完毕并同意以上协议的全部内容。点击“不同意并退出”则直接退出本APP。
+    </string>
+</resources>

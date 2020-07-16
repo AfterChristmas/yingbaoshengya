@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.activity.ClassCenterActivity">
+
+    <include
+        android:id="@+id/rl_titlebar"
+        layout="@layout/white_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/online_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/online_exercise" />
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/knowledge_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/knowledge_exerciese" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/class_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/class_exercise" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

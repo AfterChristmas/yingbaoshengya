@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.question.ErrorDetailActivity">
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/white_titlebar"
+        />
+
+    <RelativeLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="2020-02-12    12:36:39" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/blue_light_bg"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="生物"
+            android:textColor="@color/career_white"
+            android:textSize="8sp" />
+    </RelativeLayout>
+    <TextView
+        android:padding="15dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="下面对文学常识的表述不正确的一项是？
+
+A：诗词是介乎是个和散文之间的一种问题。因为起源于战国时的出国，也叫楚辞、楚辞体；又因为《离骚》为这种问题的代表作，所以又称骚体。
+
+B：《滕王阁序》是一片拼文体，其特点是，讲求对仗，一般是用四字句和六字句，多用典故，讲求造势。
+
+C：诗词是介乎是个和散文之间的一种问题。因为起源于战国时的出国，也叫楚辞、楚辞体；又因为《离骚》为这种问题的代表作，所以又称骚体。
+
+D：《滕王阁序》是一片拼文体，其特点是，讲求对仗，一般是用四字句和六字句，多用典故，讲求造势。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

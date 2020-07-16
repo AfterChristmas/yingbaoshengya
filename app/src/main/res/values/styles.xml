@@ -1,0 +1,333 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="WhiteAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/career_window_bg</item>
+        <item name="colorPrimaryDark">@color/career_window_bg</item>
+        <item name="colorAccent">@color/career_0D6EFF</item>
+        <item name="android:windowBackground">@color/career_window_bg</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:seekBarStyle">@android:style/Widget.SeekBar</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="MeAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/career_window_bg</item>
+        <item name="colorPrimaryDark">@color/career_window_bg</item>
+        <item name="colorAccent">@color/career_0D6EFF</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--  -->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <style name="home_shadow_style">
+        <item name="cornerRadius">8dp</item>
+        <item name="shadowRadius">18dp</item>
+        <item name="shadowMarginTop">1dp</item>
+        <item name="shadowMarginLeft">1dp</item>
+        <item name="shadowMarginRight">1dp</item>
+        <item name="shadowMarginBottom">10dp</item>
+        <item name="shadowColor">#1F0D6EFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="home_video_item_shadow_style">
+        <item name="cornerRadius">8dp</item>
+        <item name="shadowRadius">8dp</item>
+        <item name="shadowMarginTop">1dp</item>
+        <item name="shadowMarginLeft">2dp</item>
+        <item name="shadowMarginRight">2dp</item>
+        <item name="shadowMarginBottom">14dp</item>
+        <item name="shadowColor">#140D6EFF</item>
+    </style>
+    <style name="TransparentWindow" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="me_item_text_style" parent="android:Theme.NoTitleBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:drawablePadding">14dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/career_666666</item>
+    </style>
+    <style name="me_item_main_style" parent="android:Theme.NoTitleBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/career_textmain_242424</item>
+    </style>
+    <style name="me_item_right_text_style" parent="android:Theme.NoTitleBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textColor">@color/career_666666</item>
+    </style>
+
+
+    <!--箭头主题-->
+    <style name="arrow_style" parent="android:Theme.NoTitleBar">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">13dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:src">@drawable/me_right_arrow</item>
+    </style>
+
+    <style name="common_divider_e6e6e6">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/career_EEEEEE</item>
+    </style>
+    <style name="me_item_icon_style" parent="android:Theme.NoTitleBar">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <declare-styleable name="PieChartView">
+        <!--最大的饼图是否显示在左上角第一个-->
+        <attr name="pie_chart_show_max_part_first" format="boolean" />
+        <!--起始绘制角度，-180~+180-->
+        <attr name="pie_chart_start_angle" format="float" />
+        <!--最大扇区与其他整体的偏移量-->
+        <attr name="pie_chart_max_spacing" format="dimension" />
+        <!--第一根标注引线的长度-->
+        <attr name="pie_chart_mark_line_one_length" format="dimension" />
+        <!--第二根标注引线的长度-->
+        <attr name="pie_chart_mark_line_two_length" format="dimension" />
+        <!--标注引线的颜色-->
+        <attr name="pie_chart_mark_line_color" format="color" />
+        <!--标注文本大小-->
+        <attr name="pie_chart_mark_text_size" format="dimension" />
+        <!--标注文本颜色-->
+        <attr name="pie_chart_mark_text_color" format="color" />
+    </declare-styleable>
+    <style name="CardView.Sample">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="contentPadding">10dp</item>
+    </style>
+    <style name="iv_click_controller_land_top_dm">
+        <item name="android:layout_width">@dimen/dmcolor_commom_wh</item>
+        <item name="android:layout_height">@dimen/dmcolor_commom_wh</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:translationX">@dimen/dmcolor_commom_tran</item>
+        <item name="android:translationY">@dimen/talk_common_margin</item>
+    </style>
+
+    <style name="iv_click_controller_land_top">
+        <item name="android:layout_width">@dimen/top_layout_height_s</item>
+        <item name="android:layout_height">@dimen/top_layout_height_s</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="iv_click_controller_land_top_l">
+        <item name="android:layout_width">@dimen/top_layout_dm_height</item>
+        <item name="android:layout_height">@dimen/top_layout_dm_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="iv_click_controller_land_center">
+        <item name="android:layout_width">@dimen/center_right_layout_height</item>
+        <item name="android:layout_height">@dimen/center_right_layout_height</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="iv_click_controller_land_bottom">
+        <item name="android:layout_width">@dimen/bottom_layout_height_l</item>
+        <item name="android:layout_height">@dimen/bottom_layout_height_l</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="tv_click_controller_land_center">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/polyv_bit_text_color</item>
+        <item name="android:textSize">@dimen/center_text_size_l</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_click_controller_portrait_center">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/polyv_bit_text_color</item>
+        <item name="android:textSize">@dimen/center_text_size</item>
+        <item name="android:padding">@dimen/corners_common</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_click_controller_land_center_s">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/polyv_bit_text_color</item>
+        <item name="android:textSize">@dimen/center_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_click_controller_land_center_s_padding_tb" parent="tv_click_controller_land_center_s">
+        <item name="android:paddingTop">@dimen/talk_common_margin</item>
+        <item name="android:paddingBottom">@dimen/talk_common_margin</item>
+    </style>
+
+    <style name="tv_click_controller_land_center_not_click">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/top_layout_color_white</item>
+        <item name="android:textSize">@dimen/center_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_click_controller_land_bottom">
+        <item name="android:layout_width">@dimen/bottom_layout_height_l</item>
+        <item name="android:layout_height">@dimen/bottom_layout_height_l</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/center_bottom_margin_left_s</item>
+        <item name="android:textColor">@color/polyv_play_bt_color</item>
+        <item name="android:textSize">@dimen/bottom_right_text_size</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+    </style>
+
+    <style name="iv_click_controller_port_bottom">
+        <item name="android:layout_width">@dimen/bottom_layout_height</item>
+        <item name="android:layout_height">@dimen/bottom_layout_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="iv_click_commom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="lo_click_commom">
+        <item name="android:background">@drawable/polyv_commom_click_color_gray</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="lo_intr_commom">
+        <item name="android:background">@color/top_layout_color_white</item>
+        <item name="android:paddingBottom">@dimen/common_margin_tb</item>
+        <item name="android:paddingLeft">@dimen/common_margin_lr</item>
+        <item name="android:paddingRight">@dimen/common_margin_lr</item>
+        <item name="android:paddingTop">@dimen/common_margin_tb</item>
+    </style>
+
+    <style name="lo_download_commom">
+        <item name="android:layout_marginBottom">@dimen/center_bottom_margin_top_m</item>
+        <item name="android:layout_marginLeft">@dimen/common_margin_lr</item>
+        <item name="android:layout_marginRight">@dimen/common_margin_lr</item>
+        <item name="android:layout_marginTop">@dimen/center_bottom_margin_top_m</item>
+    </style>
+
+    <style name="lv_commom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:smoothScrollbar">true</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@android:color/transparent</item>
+    </style>
+
+    <style name="at_talk_et" parent="AppTheme">
+
+        <!-- 去除初始背景 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textSize">@dimen/dialog_top_right_text_size</item>
+
+
+        -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="popupwindow">
+        <item name="android:windowEnterAnimation">@anim/polyv_expand</item>
+        <item name="android:windowExitAnimation">@anim/polyv_collapse</item>
+    </style>
+
+    <style name="selbit_text">
+        <item name="android:layout_width">@dimen/selbit_text_width</item>
+        <item name="android:layout_height">@dimen/selbit_text_height</item>
+        <item name="android:background">@drawable/polyv_white_click_to_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/center_view_color_blue</item>
+    </style>
+
+    <style name="ProgressCircle">
+        <item name="android:indeterminateDrawable">@drawable/polyv_progressbar_circle_rotate</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxWidth">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+    <style name="TreeNodeStyleCustom">
+        <item name="android:paddingLeft">20dp</item>
+        <!--<item name="android:showDividers">middle</item>-->
+        <!--<item name="android:divider">@android:drawable/divider_horizontal_bright</item>-->
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">false</item>
+    </style>
+</resources>

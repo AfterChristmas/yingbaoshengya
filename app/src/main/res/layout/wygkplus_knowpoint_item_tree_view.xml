@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.loopeer.shadow.ShadowView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/shadow_view"
+        style="@style/home_video_item_shadow_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/career_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/career_white">
+
+        <!--android:src="@drawable/tree_ec"必须添加进行占位，否则会出现缩进无法对齐的问题-->
+        <ImageView
+            android:id="@+id/expand_icon_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/knowpoint_right" />
+
+
+        <TextView
+            android:id="@+id/label_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</com.loopeer.shadow.ShadowView>

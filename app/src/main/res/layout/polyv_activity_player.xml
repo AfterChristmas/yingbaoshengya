@@ -1,0 +1,467 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:id="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_center_player_height"
+        android:background="@color/top_text_color_black">
+
+        <com.easefun.polyvsdk.video.PolyvVideoView
+            android:id="@+id/polyv_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- 视频在加载过程中显示的进度布局 -->
+            <com.yingbao.career.video.widget.PolyvLoadingLayout
+                android:id="@+id/loading_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </com.easefun.polyvsdk.video.PolyvVideoView>
+
+
+        <!-- logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/fl_danmu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 底部字幕 -->
+        <TextView
+            android:id="@+id/srt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <!-- 顶部字幕 -->
+        <TextView
+            android:id="@+id/top_srt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <com.yingbao.career.video.widget.PolyvPlayerLightView
+            android:id="@+id/polyv_player_light_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.yingbao.career.video.widget.PolyvPlayerVolumeView
+            android:id="@+id/polyv_player_volume_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.yingbao.career.video.widget.PolyvPlayerProgressView
+            android:id="@+id/polyv_player_progress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.yingbao.career.video.widget.PolyvTouchSpeedLayout
+            android:id="@+id/polyv_player_touch_speed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <!-- 跑马灯 -->
+        <com.easefun.polyvsdk.marquee.PolyvMarqueeView
+            android:id="@+id/polyv_marquee_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.yingbao.career.video.PolyvPlayerMediaController
+            android:id="@+id/polyv_player_media_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <com.easefun.polyvsdk.video.auxiliary.PolyvAuxiliaryVideoView
+            android:id="@+id/polyv_auxiliary_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <!-- 广告片头在加载过程中显示的进度条 -->
+        <ProgressBar
+            android:id="@+id/auxiliary_loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="广告也精彩：%d秒"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <com.yingbao.career.video.widget.PolyvPlayerPreviewView
+            android:id="@+id/polyv_player_first_start_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- vlms cover -->
+        <ImageView
+            android:id="@+id/iv_vlms_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/flow_play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您正在使用非WiFi网络，继续播放将产生流量。"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/flow_play_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/polyv_tv_bg_corners"
+                    android:drawableLeft="@drawable/polyv_btn_play_port"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="流量播放"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cancel_flow_play_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/polyv_tv_bg_corners"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="取消"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 播放错误提示界面 -->
+        <com.yingbao.career.video.widget.PolyvPlayerPlayErrorView
+            android:id="@+id/polyv_player_play_error_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <!-- 线路切换界面 -->
+        <com.yingbao.career.video.widget.PolyvPlayerPlayRouteView
+            android:id="@+id/polyv_player_play_route_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadow_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:shadowMarginBottom="5dp"
+                app:shadowColor="#140D6EFF"
+                app:shadowRadius="14dp"
+                >
+                <RelativeLayout
+                    android:padding="@dimen/dp_15"
+                    android:background="@color/career_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentLeft="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_course_name"
+                                android:textColor="@color/career_textmain_242424"
+                                android:text="平行线辅助线模型"
+                                android:textSize="@dimen/sp_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tv_subject"
+                                android:text="数"
+                                android:layout_marginLeft="10dp"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:textSize="9sp"
+                                android:textColor="@color/career_white"
+                                android:background="@drawable/subject_tag_color_rank_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_course_teacher"
+                            android:text="主讲老师：吴吉烈"
+                            android:layout_marginTop="7dp"
+                            android:textSize="@dimen/sp_10"
+                            android:textColor="@color/career_666666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_course_start_time"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="2018-04-01 10:00"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/career_666666"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </com.loopeer.shadow.ShadowView>
+
+
+            <TextView
+                android:id="@+id/tv_video_list_title"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/career_textmain_242424"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="视频列表"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_video_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <www.linwg.org.lib.LCardView
+                android:id="@+id/ll_jump_test"
+                android:visibility="visible"
+                app:cornerRadius="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:shadowColor="#1F0D6EFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:focusable="true"
+                app:bottomOffset="4dp"
+                android:focusableInTouchMode="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_answer_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/ll_left"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:orientation="vertical"
+                            android:id="@+id/tv_answer_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="同步课程后练习"
+                            android:textColor="@color/career_textmain_242424"
+                            android:layout_toRightOf="@id/iv_answer_state" />
+                        <TextView
+                            android:background="@drawable/video_jump_grient_bg"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:textColor="@color/career_white"
+                            android:paddingRight="10dp"
+                            android:text="马上开始 >"
+                            android:layout_toRightOf="@id/iv_answer_state" />
+                    </LinearLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_toRightOf="@+id/ll_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:id="@+id/iv_answer_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintDimensionRatio="h,406:160"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/video_jump_test"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </www.linwg.org.lib.LCardView>
+            <TextView
+                android:id="@+id/tv_course_info_title"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="课程介绍"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/career_textmain_242424"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_course_info"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="12sp"
+                android:textColor="@color/career_textmain_242424"
+                android:text="平行线的性质判定背诵，几何题目无从下手，求面积的时候找不到？辅助线添加是添加几何难题的重要方法，让老师为你讲解几何辅助线的神奇。"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shadowMarginTop="5dp"
+        app:shadowColor="#140D6EFF"
+        app:shadowRadius="14dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_collect"
+                    android:layout_width="20dp"
+                    android:src="@drawable/video_collect"
+                    android:layout_height="20dp"/>
+                <TextView
+                    android:text="收藏"
+                    android:id="@+id/tv_collect"
+                    android:textSize="16sp"
+                    android:textColor="@color/career_textmain_242424"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:id="@+id/ll_download"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/video_load"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"/>
+                <TextView
+                    android:id="@+id/tv_download_status"
+                    android:text="缓存"
+                    android:textSize="16sp"
+                    android:textColor="@color/career_textmain_242424"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.loopeer.shadow.ShadowView>
+</RelativeLayout>

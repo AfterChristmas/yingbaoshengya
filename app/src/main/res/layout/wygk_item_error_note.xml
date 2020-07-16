@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/career_white">
+    <com.loopeer.shadow.ShadowView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/career_white"
+        style="@style/home_video_item_shadow_style"
+        >
+
+        <LinearLayout
+            android:background="@drawable/white_rank_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="2020-02-12    12:36:39" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/blue_light_bg"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="1dp"
+                    android:text="生物"
+                    android:id="@+id/tv_subject"
+                    android:textColor="@color/career_white"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+            <com.yingbao.career.view.WebLinarLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_web_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.yingbao.career.view.MyQuesView
+                    android:id="@+id/wv_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </com.yingbao.career.view.WebLinarLayout>
+        </LinearLayout>
+    </com.loopeer.shadow.ShadowView>
+</RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/career_window_bg">
+
+
+    <ScrollView
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/career_window_bg">
+
+
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadow_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintDimensionRatio="h,656:160"
+                app:shadowColor="#1F0D6EFF"
+                app:shadowMarginBottom="5dp"
+                app:shadowRadius="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_question_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="120"
+                            android:textColor="@color/career_17CF89"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="（节）"
+                            android:textColor="@color/career_17CF89" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="共完成题目数"
+                            android:textColor="@color/career_666666" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="31"
+                            android:textColor="@color/career_FEA51B"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="（%）"
+                            android:textColor="@color/career_FEA51B" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="正确率"
+                            android:textColor="@color/career_666666" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintDimensionRatio="h,656:160"
+                app:shadowColor="#1F0D6EFF"
+                app:shadowMarginBottom="5dp"
+                app:shadowRadius="14dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_video_time_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="做习题数目"
+                        android:textColor="@color/career_textmain_242424"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="h,623:363"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_video_time_info" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintDimensionRatio="h,656:160"
+                app:shadowColor="#1F0D6EFF"
+                app:shadowMarginBottom="5dp"
+                app:shadowRadius="14dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/chart_sujects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="科目练习数目"
+                        android:textColor="@color/career_textmain_242424"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.yingbao.career.view.PieChartView
+                        android:id="@+id/pieChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="h,623:363"
+                        app:layout_constraintTop_toBottomOf="@+id/chart_sujects"
+                        app:pie_chart_mark_line_color="@color/career_666666"
+                        app:pie_chart_mark_text_color="@color/career_666666"
+                        app:pie_chart_mark_text_size="10dp"
+                        app:pie_chart_max_spacing="0dp"
+                        app:pie_chart_show_max_part_first="false"
+                        app:pie_chart_start_angle="-180" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

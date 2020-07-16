@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.home.activity.ClassCenterActivity">
+
+    <include
+        android:id="@+id/rl_titlebar"
+        layout="@layout/white_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/syn_class"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="h,679:311"
+                android:src="@drawable/syn_class" />
+
+            <ImageView
+                app:layout_constraintTop_toBottomOf="@+id/syn_class"
+                android:id="@+id/knowledge_unit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="h,679:311"
+                android:src="@drawable/knowledge_unit" />
+
+            <ImageView
+                app:layout_constraintTop_toBottomOf="@+id/knowledge_unit"
+                android:id="@+id/review_exam"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="h,679:311"
+                android:src="@drawable/review_exam" />
+
+            <ImageView
+                app:layout_constraintTop_toBottomOf="@+id/review_exam"
+                android:id="@+id/new_tutorial"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintDimensionRatio="h,679:311"
+                android:src="@drawable/new_tutorial" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<!--
+    <com.yingbao.career.view.JzvdStdShowShareButtonAfterFullscreen
+        android:id="@+id/jzvd_video"
+        android:layout_width="match_parent"
+        android:background="@color/career_ABABAB"
+        android:layout_height="wrap_content" />-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadow_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shadowMarginBottom="5dp"
+                app:shadowColor="#140D6EFF"
+                app:shadowRadius="14dp"
+                >
+                <RelativeLayout
+                    android:padding="@dimen/dp_15"
+                    android:background="@color/career_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentLeft="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="@color/career_textmain_242424"
+                                android:text="平行线辅助线模型"
+                                android:textSize="@dimen/sp_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="数"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/career_white"
+                                android:background="@drawable/subject_tag_color_rank_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <TextView
+                            android:text="主讲老师：吴吉烈"
+                            android:layout_marginTop="7dp"
+                            android:textSize="@dimen/sp_10"
+                            android:textColor="@color/career_666666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="2018-04-01 10:00"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/career_666666"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </com.loopeer.shadow.ShadowView>
+
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="试题列表"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="课程介绍"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="平行线的性质判定背诵，几何题目无从下手，求面积的时候找不到？辅助线添加是添加几何难题的重要方法，让老师为你讲解几何辅助线的神奇。"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"/>
+            <TextView
+                android:text="收藏"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="缓存"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yingbao.career.view.YScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_search"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhpan.bannerview.BannerViewPager
+                android:id="@+id/banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                app:bvp_indicator_visibility="visible"
+                app:bvp_round_corner="8dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_functions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_topic_line"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_video_class"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.meetsl.scardview.SCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp"
+                        app:cardShadowStartColor="#1F0D6EFF"
+                        app:cardShadowEndColor="@color/career_white"
+                        app:cardLightDirection="top">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_53"
+                            android:layout_height="@dimen/dp_53"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="15dp"
+                            android:src="@drawable/career_video_home" />
+                    </com.meetsl.scardview.SCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="视频课程"
+                        android:textColor="@color/career_textmain_242424"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_smart_exercise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.meetsl.scardview.SCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp"
+                        app:cardShadowStartColor="#1F0D6EFF"
+                        app:cardShadowEndColor="@color/career_white"
+                        app:cardLightDirection="top">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_53"
+                            android:layout_height="@dimen/dp_53"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="15dp"
+                            android:src="@drawable/career_test_home" />
+                    </com.meetsl.scardview.SCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="智能练习"
+                        android:textColor="@color/career_textmain_242424"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_collect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.meetsl.scardview.SCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp"
+                        app:cardShadowStartColor="#1F0D6EFF"
+                        app:cardShadowEndColor="@color/career_white"
+                        app:cardLightDirection="top">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_53"
+                            android:layout_height="@dimen/dp_53"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="15dp"
+                            android:src="@drawable/career_collect_home" />
+                    </com.meetsl.scardview.SCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="我的收藏"
+                        android:textColor="@color/career_textmain_242424"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cache"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.meetsl.scardview.SCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp"
+                        app:cardShadowStartColor="#1F0D6EFF"
+                        app:cardShadowEndColor="@color/career_white"
+                        app:cardLightDirection="top">
+
+                    <ImageView
+                            android:layout_width="@dimen/dp_53"
+                            android:layout_height="@dimen/dp_53"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="15dp"
+                            android:src="@drawable/career_cache_home" />
+                    </com.meetsl.scardview.SCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="我的缓存"
+                        android:textColor="@color/career_textmain_242424"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="推荐课程"
+                    android:textColor="@color/career_textmain_242424"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:text="更多"
+                        android:textColor="@color/career_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_5"
+                        android:layout_height="@dimen/dp_8"
+                        android:src="@drawable/career_more" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="精品微课"
+                    android:textColor="@color/career_textmain_242424"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:text="更多"
+                        android:textColor="@color/career_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_5"
+                        android:layout_height="@dimen/dp_8"
+                        android:src="@drawable/career_more" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="智能练习"
+                android:textColor="@color/career_textmain_242424"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_testonline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/career_testonline_home" />
+
+                <ImageView
+                    android:id="@+id/iv_knowledgetest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/career_knowledgetest_home" />
+
+                <ImageView
+                    android:id="@+id/iv_classtest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@drawable/career_classtest_home" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.yingbao.career.view.YScrollView>
+
+    <LinearLayout
+        android:id="@+id/top_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="15dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_topblankline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.yingbao.career.view.CircleImageView
+                android:id="@+id/icon_person"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/icon_person"
+                android:background="@drawable/round_grey_bg">
+
+
+                <ImageView
+                    android:id="@+id/img_home_search"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/career_search_home" />
+
+                <TextView
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/img_home_search"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:hint="搜索课程名称"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

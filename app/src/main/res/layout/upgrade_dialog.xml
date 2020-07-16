@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rank_bg"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        >
+
+        <ImageView
+            android:id="@+id/beta_upgrade_banner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:tag="beta_upgrade_banner"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/beta_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:tag="beta_title"
+            android:text="发现新版本"
+            android:textColor="@color/career_textmain_242424"
+            android:visibility="visible"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/career_divider_EBEBEB"
+            />
+
+        <TextView
+            android:id="@+id/beta_upgrade_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:tag="beta_upgrade_info"
+            android:text=""
+            android:enabled="false"
+            android:textColor="@color/career_textmain_242424"
+            />
+
+        <TextView
+            android:id="@+id/beta_upgrade_feature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:tag="beta_upgrade_feature"
+            android:text=""
+            android:enabled="false"
+            android:textColor="@color/career_textmain_242424"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/beta_cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_grey_bg"
+                android:tag="beta_cancel_button"
+                android:text="下次再说"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <Button
+                android:id="@+id/beta_confirm_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/round_primary_bg"
+                android:tag="beta_confirm_button"
+                android:text="更新"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

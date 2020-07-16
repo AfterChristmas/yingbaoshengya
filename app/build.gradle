@@ -1,0 +1,156 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.yingbao.career"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 3
+        versionName "1.0.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters  'armeabi-v7a', 'armeabi', 'x86'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    android {
+        android.applicationVariants.all {
+            variant ->
+                variant.outputs.all {
+                    //在这里修改apk文件名
+                    outputFileName = "career-v${variant.versionName}.apk"
+                }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'  //没有使用特殊Header，可以不加这行
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.6.0'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation project(path: ':bannerview')
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+
+    implementation 'io.github.meetsl:SCardView:1.2'
+
+    implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'com.github.promeg:tinypinyin:2.0.3' // TinyPinyin核心包，约80KB
+
+    // 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+
+    /* // fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    // kotlin扩展（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'*/
+    implementation 'com.github.alorma:timelineview:2.3.0'
+    implementation 'me.everything:overscroll-decor-android:1.0.4'
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.2'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'com.github.wildma:PictureSelector:2.0.0'
+
+    /*  implementation 'com.liulishuo.okdownload:okdownload:1.0.7'
+    implementation 'com.liulishuo.okdownload:sqlite:1.0.7'
+    implementation 'com.liulishuo.okdownload:okhttp:1.0.7'
+    implementation 'com.liulishuo.okdownload:filedownloader:1.0.7'
+    implementation 'com.liulishuo.okdownload:ktx:1.0.7'*/
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.1"
+    //room
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    //下载
+    implementation 'com.arialyy.aria:core:3.8.6'
+    kapt 'com.arialyy.aria:compiler:3.8.6'
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //保利威视
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.easefun.polyv:polyvPlayer:2.12.0'//SDK核心包
+    implementation 'com.easefun.polyv:polyvPlayerABI:1.8.0'//SDK核心包
+    implementation 'com.easefun.polyv:polyvDownload:2.12.0'//SDK下载功能
+//    implementation 'com.easefun.polyv:polyvUpload:2.2.3'//SDK上传功能
+    implementation 'com.easefun.polyv:polyvScreencast:0.2.1'//SDK投屏功能
+    implementation 'com.easefun.polyv:polyvSub:2.10.0'//弹幕、截图功能中使用
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"//demo中下载列表使用
+    implementation 'com.avast:android-styled-dialogs:2.3.3'
+    implementation 'com.github.bmelnychuk:atv:1.2.9'
+    //compile 'com.tencent.bugly:crashreport:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.3.2
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'org.linwg1988:lcardview:1.5.4'
+    implementation 'com.kongzue.dialog_v3:dialog:3.1.8'
+}
+configurations {
+    //在整个构建过程中排除com.tencent.bugly:crashreport
+    all*.exclude group:'com.tencent.bugly',module:'crashreport'
+}

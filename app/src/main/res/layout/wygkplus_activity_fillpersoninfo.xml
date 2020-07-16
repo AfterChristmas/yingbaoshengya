@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/rl_titlebar"
+        layout="@layout/white_titlebar" />
+    <!-- 账户安全 -->
+    <RelativeLayout
+        android:id="@+id/rl_account_safety"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:id="@+id/pi_infor_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="昵称"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img0"
+            android:gravity="center_vertical|right"
+            android:hint="请输入您的昵称"
+            android:background="@null"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img0"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/personal_information_divider1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:visibility="gone"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_gender"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="我的性别"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img1"
+            android:gravity="center_vertical"
+            android:text="男"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_gaokao_location"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="高考所在地"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_gaokao_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img2"
+            android:gravity="center_vertical"
+            android:text="请选择"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_study_city"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="就读城市"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_study_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img3"
+            android:gravity="center_vertical"
+            android:text="请选择"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/personal_information_divider3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:background="@color/career_EEEEEE" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_study_school"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:id="@+id/tv_study_school_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="就读学校"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_study_school"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img4"
+            android:layout_toRightOf="@+id/tv_study_school_tag"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:layout_marginLeft="10dp"
+            android:text="请选择"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:id="@+id/personal_information_divider4"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_grade"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="所在年级"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img5"
+            android:gravity="center_vertical"
+            android:text="请选择"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img5"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:id="@+id/personal_information_divider5"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:background="@color/career_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="所在班级"
+            android:textColor="@color/career_666666"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/personal_inf_img6"
+            android:gravity="center_vertical|right"
+            android:hint="请输入您所在的班级"
+            android:background="@null"
+            android:textColor="@color/career_666666"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/personal_inf_img6"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/career_right_arrow"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/personal_information_divider6"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="0.5dp"
+        android:background="@color/career_EEEEEE" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:background="@drawable/career_round_bg"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:textSize="16sp"
+        android:textColor="@color/career_white"
+        />
+</LinearLayout>

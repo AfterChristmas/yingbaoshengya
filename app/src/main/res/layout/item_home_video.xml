@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.loopeer.shadow.ShadowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/career_white"
+    style="@style/home_video_item_shadow_style"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_classimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_class_name"
+            android:text="数列大招系列—数列构造"
+            android:lines="1"
+            android:textColor="@color/career_textmain_242424"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.yingbao.career.view.CircleImageView
+                android:id="@+id/icon_person"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_launcher_background" />
+            <TextView
+                android:layout_toRightOf="@+id/icon_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="刘亦"
+                android:id="@+id/tv_teacher"
+                android:textColor="@color/career_textmain_242424"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="2018-04-01 10:00"
+                android:id="@+id/tv_time"
+                android:textColor="@color/career_666666"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</com.loopeer.shadow.ShadowView>
