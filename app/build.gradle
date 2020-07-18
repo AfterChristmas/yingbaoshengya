@@ -14,8 +14,8 @@ android {
         applicationId "com.yingbao.shengya"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.0.4"
+        versionCode 1
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         ndk {
@@ -48,7 +48,7 @@ android {
             variant ->
                 variant.outputs.all {
                     //在这里修改apk文件名
-                    outputFileName = "career-v${variant.versionName}.apk"
+                    outputFileName = "shengya-v${variant.versionName}.apk"
                 }
         }
     }

@@ -76,6 +76,7 @@ class MeActivity : BaseActivity() {
                         }
                         tv_username.text = CareerSPHelper.getUserName()
                         Glide.with(applicationContext).load(userDetailResultBean.imageUrl)
+                            .error(R.mipmap.ic_launcher)
                             .into(user_icon)
                         tv_school_class.text =
                             "${CareerSPHelper.getUserSchool()}     ${CareerSPHelper.getUserClass()}"
