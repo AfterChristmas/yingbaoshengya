@@ -14,6 +14,7 @@ import java.util.Objects;
 public interface CommonConstant {
     // 是否显示用户协议
     String SHOW_USER_AGREEMENT = "SHOW_USER_AGREEMENT";
+    String APP_TYPE = "0";
 
     interface SpConstant {
         String SP_FILE_NAME = "career";

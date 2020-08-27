@@ -1,6 +1,7 @@
 package com.yingbao.career.http;
 
 
+import com.yingbao.career.common.CommonConstant;
 import com.yingbao.career.http.resultbean.AddErrorFavorResultBean;
 import com.yingbao.career.http.resultbean.AddPrintRecordResult;
 import com.yingbao.career.http.resultbean.BannerResultBean;
@@ -82,6 +83,7 @@ public class RetrofitFactory {
                     builder.addHeader("Accept", "application/json");
                     builder.addHeader("Content-Type", "application/json;charset=UTF-8");
                     builder.addHeader("token", CareerSPHelper.getToken());
+                    builder.addHeader("userType", CommonConstant.APP_TYPE);
                     return chain.proceed(builder.build());
                 })
                 .build();

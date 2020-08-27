@@ -1,6 +1,7 @@
 package com.yingbao.career.http;
 
 
+import com.yingbao.career.common.CommonConstant;
 import com.yingbao.career.utils.CareerSPHelper;
 
 import java.security.KeyManagementException;
@@ -52,6 +53,7 @@ public class UploadImageManager {
                         Request.Builder builder = newRequest.newBuilder();
                         builder.addHeader("Accept", "application/json");
                         builder.addHeader("token", CareerSPHelper.getToken());
+                        builder.addHeader("userType", CommonConstant.APP_TYPE);
                         return chain.proceed(builder.build());
                     })
                     .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
