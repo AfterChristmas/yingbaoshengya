@@ -23,6 +23,7 @@ import com.tencent.bugly.crashreport.CrashReport.UserStrategy
 import com.yingbao.career.R
 import com.yingbao.career.ui.home.activity.HomeActivity
 import com.yingbao.career.ui.personal.MeActivity
+import com.yingbao.career.utils.CareerSPHelper
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
@@ -61,15 +62,25 @@ class MyApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         context = this
+        val showAgreement =
+            CareerSPHelper.getBoolean(applicationContext, CommonConstant.SHOW_USER_AGREEMENT, true)
+        if (!showAgreement) {
+            initPllyv()
+            initBugly()
+        }
+    }
+
+    private fun initPllyv() {
         //获取 PolyvSDKClient实例
 
         //获取 PolyvSDKClient实例
         val client = PolyvSDKClient.getInstance()
         //设置SDK加密串
         //设置SDK加密串
-        val sdkStr = "Ej4Cg0MRd4YI5rWc3UjyGc2BZ9cI5IMYpbSbop03Yoje5qb8cWp3xeAMzYJBHB3lD+8DZZCvSO8wtOHUpCrs26/i8LYFSBVRlpULVDSlFIOd10IMhTs5HQb/psnVnMXUrvMi+okM1xn/wC4ln5+j5A=="
+        val sdkStr =
+            "Ej4Cg0MRd4YI5rWc3UjyGc2BZ9cI5IMYpbSbop03Yoje5qb8cWp3xeAMzYJBHB3lD+8DZZCvSO8wtOHUpCrs26/i8LYFSBVRlpULVDSlFIOd10IMhTs5HQb/psnVnMXUrvMi+okM1xn/wC4ln5+j5A=="
         val sdkKey = "VXtlHmwfS2oYm0CZ"
-        val sdkSecret  = "2u9gDPKdX6GyQJKU"
+        val sdkSecret = "2u9gDPKdX6GyQJKU"
         client.settingsWithConfigString(sdkStr, sdkKey, sdkSecret)
         //初始化SDK设置
         //初始化SDK设置
@@ -80,14 +91,13 @@ class MyApplication : MultiDexApplication() {
         //设置下载保存目录
         //设置下载保存目录
         val filePath = CommonConstant.FileConstant.getVideoDownloadDir()
-        val file= File(filePath)
+        val file = File(filePath)
         if (!file.exists()) {
             file.mkdirs()
         }
         PolyvSDKClient.getInstance().setDownloadDir(file)
         // 设置下载队列总数，多少个视频能同时下载。(默认是1，设置负数和0是没有限制)
         PolyvDownloaderManager.setDownloadQueueCount(1)
-        initBugly()
     }
 
     private fun initBugly() {
