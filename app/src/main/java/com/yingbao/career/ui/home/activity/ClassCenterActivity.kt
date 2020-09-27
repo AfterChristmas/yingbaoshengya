@@ -36,6 +36,12 @@ class ClassCenterActivity : BaseActivity() {
             intent.putExtra(CourseListActivity.SHOW_GRADE,false)
             startActivity(intent)
         }
+        new_tutorial.setOnClickListener {
+            val intent  = Intent(this,CourseListActivity::class.java)
+            intent.putExtra(CourseListActivity.SPECILE_TYPE,"108")
+            intent.putExtra(CourseListActivity.SHOW_GRADE,false)
+            startActivity(intent)
+        }
     }
 
     private fun initData() {
