@@ -1,6 +1,7 @@
 package com.yingbao.career.ui.home.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -148,6 +149,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.iv_knowledgetest).setOnClickListener(this);
         findViewById(R.id.iv_classtest).setOnClickListener(this);
         findViewById(R.id.ll_more).setOnClickListener(this);
+        findViewById(R.id.tv_jubao).setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://www.12377.cn/");
+            Intent intent =new  Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
 
         rv_recommend.setHasFixedSize(true);
         rv_recommend.setNestedScrollingEnabled(false);
